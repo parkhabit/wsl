@@ -1,9 +1,8 @@
+
 import type { Metadata } from "next";
 import { roboto } from '@/app/fonts';
 import "./globals.css";
-import Link from "next/link";
-
-
+import NavLink from "./components/NavLink/NavLink";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,6 +14,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -22,9 +22,11 @@ export default function RootLayout({
       >
         <h1 className="text-4xl font-bold">Women's Super League</h1>
         <div className="flex flex-row gap-2">
-          <Link href="/pages/matches">Matches</Link>
-          <Link href="/pages/table">Table</Link>
-          <Link href="/pages/stats">Stats</Link>
+          <NavLink href="/">Overview</NavLink>
+          <NavLink href="/pages/matches">Matches</NavLink>
+          <NavLink href="/pages/table">Table</NavLink>
+          <NavLink href="/pages/stats">Stats</NavLink>
+
         </div>
         {children}
       </body>
