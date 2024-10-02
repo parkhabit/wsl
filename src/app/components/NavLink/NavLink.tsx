@@ -7,7 +7,7 @@ export default function NavLink({href, children}: {href: string, children: React
 const pathname = usePathname();
 
     return (
-        <Link href={href} className={`py-1 px-5 rounded-full border-2 ${pathname === href ? "bg-[#3a3f50] border-white" : "bg-[#333438] border-transparent"} `}>
+        <Link href={href} className={`py-2 px-3 rounded-full border text-sm ${pathname === href ? "bg-[#3a3f50] border-white" : "bg-[#333438] border-transparent"} `}>
             <p>{children}</p>
         </Link>
     );

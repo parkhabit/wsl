@@ -20,13 +20,13 @@ export default function RootLayout({
       <body
         className={`${roboto.className} antialiased`}
       >
-        <h1 className="text-4xl font-bold">Women's Super League</h1>
-        <div className="flex flex-row gap-2">
+        <h1 className="text-2xl font-bold p-4 pb-2">Women's Super League</h1>
+        <div className="flex flex-row gap-2 px-4">
           <NavLink href="/">Overview</NavLink>
           <NavLink href="/pages/matches">Matches</NavLink>
           <NavLink href="/pages/table">Table</NavLink>
           <NavLink href="/pages/stats">Stats</NavLink>
-
+          <NavLink href="/pages/players">Players</NavLink>
         </div>
         {children}
       </body>
